@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 [XmlInclude(typeof(Rectagle))]
 [XmlInclude(typeof(Square))]
 public abstract class Shape 
-{
+{   // commento scritto daa festigf
     private string name;
     public int X0 { get; set; }
     public int Y0 { get; set; }
