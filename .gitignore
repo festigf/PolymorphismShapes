@@ -1,1 +1,5 @@
-*/obj/*
+.vs/
+PolymorphismShapes/PolymorphismShapes.csproj
+PolymorphismShapes/PolymorphismShapes.csproj.user
+PolymorphismShapes/bin/
+PolymorphismShapes/obj/
