@@ -5,7 +5,7 @@ class ClsForm : Form
     Button btnLength,btnArea,SaveXml,btnLoadXml,btnDraw;
 
     Shape line = new Line(0, 0, 10, 0, "Linea");
-    Shape rect = new Rectagle(10,20, 20, 30, "rect");
+    Shape rect = new Rectagle(10,20, 40, 100, "rect");
     ListShapes listShape = new ListShapes();
     PictureBox pictureBox = new PictureBox();
     public ClsForm()

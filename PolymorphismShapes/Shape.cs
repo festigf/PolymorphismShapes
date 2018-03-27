@@ -8,6 +8,8 @@ using System.Xml.Serialization;
 [XmlInclude(typeof(Line))]
 [XmlInclude(typeof(Rectagle))]
 [XmlInclude(typeof(Square))]
+[XmlInclude(typeof(Circle))]
+
 public abstract class Shape 
 {
     private string name;
