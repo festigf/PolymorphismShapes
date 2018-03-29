@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs/PolymorphismShapes/v15/Server/sqlite3
+/PolymorphismShapes/bin/Debug
+/PolymorphismShapes/obj/Debug
+/PolymorphismShapes/obj/Release
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/PolymorphismShapes/v15/.suo
+/PolymorphismShapes/PolymorphismShapes.csproj.user
