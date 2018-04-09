@@ -28,6 +28,7 @@ public class ListShapes : List<Shape>
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<Shape>));
             StreamReader sr = new StreamReader(fileName);
+            //Ricarica nella lista le figure geometriche salvate nel file xml.
             this.AddRange((List<Shape>)xs.Deserialize(sr));
             sr.Close();
             return true;
