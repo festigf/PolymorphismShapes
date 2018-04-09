@@ -6,12 +6,22 @@ class ClsForm : Form
 
     Shape line = new Line(0, 0, 10, 0, "Linea");
     Shape rect = new Rectagle(10,20, 40, 100, "rect");
+
+    //classe base shape
+    //polimorfismo dinamico proprietà comuni
+    //
+
+
+
     ListShapes listShape = new ListShapes();
     PictureBox pictureBox = new PictureBox();
     public ClsForm()
     {
         listShape.Add(line);
         listShape.Add(rect);
+
+
+
 
         btnLength = new Button
         {
@@ -52,29 +62,24 @@ class ClsForm : Form
         this.Width = 600;
         this.Height = 800;
     }
-
     private void BtnDraw_Click(object sender, EventArgs e)
     {
         listShape.Draw(this.pictureBox);
     }
-
     private void BtnLoadXml_Click(object sender, EventArgs e)
     {
         listShape.LoadXml("listShape.xml");
     }
-
     private void BtnSaveXml_Click(object sender, EventArgs e)
     {
         listShape.SaveXml("listShape.xml");
     }
-
     private void BtnArea_Click(object sender, EventArgs e)
     {
         //rect.X = 0; rect. = 10;
         //rect.Y = 0; rect.Y1 = 10;
         this.btnArea.Text=rect.Area.ToString();
     }
-
     private void Btn_Click(object sender, EventArgs e)
     {
         // line.X0 = 0; line.X1 = 10;
@@ -84,9 +89,7 @@ class ClsForm : Form
 }
 
 class Program
-{ 
-
-
+{
     static void Main(string[] args)
     {
         Application.Run(new ClsForm());

@@ -2,13 +2,14 @@
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-
+// [] per compilatore 
 [Serializable]
 [XmlInclude(typeof(Shape))]
 [XmlInclude(typeof(Line))]
 [XmlInclude(typeof(Rectagle))]
 [XmlInclude(typeof(Square))]
 [XmlInclude(typeof(Circle))]
+
 
 public abstract class Shape 
 {
