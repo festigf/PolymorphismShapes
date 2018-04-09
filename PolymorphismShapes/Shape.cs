@@ -51,8 +51,5 @@ public abstract class Shape
         return Id + " Area = " + string.Format("{0:F2}", Area);
     }
     public abstract void Draw(PictureBox pictureBox);
-        
-
-    
 }
 

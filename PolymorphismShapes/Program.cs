@@ -12,6 +12,9 @@ class ClsForm : Form
     {
         listShape.Add(line);
         listShape.Add(rect);
+        rect = new Rectagle(50, 30, 100, 100, "rect");
+       
+        listShape.Add(rect);
 
         btnLength = new Button
         {
