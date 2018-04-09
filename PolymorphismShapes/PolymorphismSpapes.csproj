@@ -48,6 +48,7 @@
     <Compile Include="Circle.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="ListShapes.cs" />
+    <Compile Include="Poligono.cs" />
     <Compile Include="Program.cs">
       <SubType>Form</SubType>
     </Compile>
