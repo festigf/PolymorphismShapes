@@ -1,0 +1,7 @@
+C:\Lavoro-Temp\oggi\16.04\PolymorphismShapes\PolymorphismShapes\bin\Debug\PolymorphismShapes.exe.config
+C:\Lavoro-Temp\oggi\16.04\PolymorphismShapes\PolymorphismShapes\bin\Debug\PolymorphismShapes.exe
+C:\Lavoro-Temp\oggi\16.04\PolymorphismShapes\PolymorphismShapes\bin\Debug\PolymorphismShapes.pdb
+C:\Lavoro-Temp\oggi\16.04\PolymorphismShapes\PolymorphismShapes\obj\Debug\PolymorphismShapes.csprojResolveAssemblyReference.cache
+C:\Lavoro-Temp\oggi\16.04\PolymorphismShapes\PolymorphismShapes\obj\Debug\PolymorphismShapes.csproj.CoreCompileInputs.cache
+C:\Lavoro-Temp\oggi\16.04\PolymorphismShapes\PolymorphismShapes\obj\Debug\PolymorphismShapes.exe
+C:\Lavoro-Temp\oggi\16.04\PolymorphismShapes\PolymorphismShapes\obj\Debug\PolymorphismShapes.pdb
