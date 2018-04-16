@@ -31,7 +31,7 @@ public class Line:Shape
     }
     public override string ToString()
     {
-        return base.ToString()+"X1="+X1.ToString()+";Y1="+Y1.ToString();
+        return base.ToString()+"X1 = "+X1.ToString()+";Y1 = "+Y1.ToString();
     }
     public override void Draw(PictureBox pictureBox)
     {
