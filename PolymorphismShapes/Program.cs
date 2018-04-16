@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+/// <summary>
+///  esercizio di polimorfismo
+/// </summary>
 class ClsForm : Form
 {
     Button btnLength,btnArea,SaveXml,btnLoadXml,btnDraw;
