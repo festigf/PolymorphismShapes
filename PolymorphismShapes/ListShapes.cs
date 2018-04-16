@@ -10,8 +10,7 @@ public class ListShapes : List<Shape>//lista di oggeti di tipo polimorfico
     {
         try
         {
-            XmlSerializer xs = new XmlSerializer(typeof(List<Shape>));//preleva i nomi dgli attributi di ogni oggetto da sola 
-            //classe xmlserializer
+            XmlSerializer xs = new XmlSerializer(typeof(List<Shape>));//preleva i nomi dgli attributi di ogni oggetto da sola //classe xmlserializer
             StreamWriter sw = new StreamWriter(fileName);
             xs.Serialize(sw, this);
             sw.Close();

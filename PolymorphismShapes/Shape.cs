@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-
+using System.Drawing;
 // [] per compilatore 
 [Serializable]
 [XmlInclude(typeof(Shape))]
@@ -20,7 +20,16 @@ public abstract class Shape
     {
         Id = s;
     }
-
+    public string ColorePenna
+    {
+        get;
+        set;
+    }
+    public string Specnaz
+    {
+        get;
+        set;
+    }
     protected Shape()
     {
     }
@@ -52,8 +61,5 @@ public abstract class Shape
         return Id + " Area = " + string.Format("{0:F2}", Area);
     }
     public abstract void Draw(PictureBox pictureBox);
-        
-
-    
+          
 }
-

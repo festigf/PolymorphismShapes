@@ -6,12 +6,13 @@ public class Line:Shape
     public Line() {}
     public Line(string s):base(s) { }
 
-    public Line(int x0, int y0, int x1, int y1, string id) : base(id)
+    public Line(int x0, int y0, int x1, int y1, string id,string colorePenna) : base(id)
     {
         this.X0 = x0;
         this.Y0 = y0;
         this.X1 = x1;
         this.Y1 = y1;
+        this.ColorePenna = colorePenna;
     }
 
     public int X1 { get; set; }
@@ -36,8 +37,7 @@ public class Line:Shape
     public override void Draw(PictureBox pictureBox)
     {
         Graphics g = pictureBox.CreateGraphics();
-        g.DrawLine(new Pen(Color.Blue), X0, Y0, X1, Y1);
+        g.DrawLine(new Pen(Color.FromName(ColorePenna)), X0, Y0, X1, Y1);
 
     }
-
 }
