@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismSpapes", "PolymorphismShapes\PolymorphismSpapes.csproj", "{E117F277-5F5E-4AFD-8332-86765CA521C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismShapes", "PolymorphismShapes\PolymorphismShapes.csproj", "{E117F277-5F5E-4AFD-8332-86765CA521C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

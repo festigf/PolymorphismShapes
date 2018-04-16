@@ -6,7 +6,7 @@ using System.Windows.Forms;
 public class Circle : Shape
 {
     public Circle() { }
-    public Circle(string s) : base(s) { }
+    public Circle(string s, Color BackgroundColor, float Thickness) : base(s, BackgroundColor, Thickness) { }
 
    
     public int X1 { get; set; }

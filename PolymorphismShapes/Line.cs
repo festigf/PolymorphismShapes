@@ -4,9 +4,10 @@ using System.Windows.Forms;
 public class Line:Shape
 {
     public Line() {}
-    public Line(string s):base(s) { }
+    public Line(string s, Color BackgroundColor, float Thickness) :base(s, BackgroundColor, Thickness) { }
+    public Line(string s) : base(s) { }
 
-    public Line(int x0, int y0, int x1, int y1, string id) : base(id)
+    public Line(int x0, int y0, int x1, int y1, string id, Color BackgroundColor, float Thickness) : base(id, BackgroundColor, Thickness)
     {
         this.X0 = x0;
         this.Y0 = y0;

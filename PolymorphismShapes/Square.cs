@@ -2,14 +2,13 @@
 using System.Windows.Forms;
 public class Square : Shape
 {
-    private int side;
-    public int Side { get => side; set => side = value; }
+    private int _side;
+    public int Side { get => _side; set => _side = value; }
     public Square(){}
 
-    public Square(int side, string id)
-        : base(id)
+    public Square(int Side, string Id, Color BackgroundColor, float Thickness) : base(Id, BackgroundColor, Thickness)
     {
-        this.Side = side;
+        _side = Side;
     }
 
     public override double Area

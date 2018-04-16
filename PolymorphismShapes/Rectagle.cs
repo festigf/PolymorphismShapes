@@ -4,7 +4,7 @@ public class Rectagle : Shape
 {
     public int Height { get; set; }
     public int Width { get; set; }
-    public Rectagle(int x0,int y0, int Height,int Width, string id) : base(id)
+    public Rectagle(int x0,int y0, int Height,int Width, string id, Color BackgroundColor, float Thickness) : base(id, BackgroundColor, Thickness)
     {
         this.X0 = x0;
         this.Y0 = y0;
@@ -13,7 +13,7 @@ public class Rectagle : Shape
     }
 
     public Rectagle(){}
-    public Rectagle(string s) : base(s) { }
+    public Rectagle(string s, Color BackgroundColor, float Thickness) : base(s, BackgroundColor, Thickness) { }
     public override  double Area
     {
         get { return Width * Height; }
@@ -22,13 +22,13 @@ public class Rectagle : Shape
     {
         get
         {
-            return Width * 2+ Height*2;
+            return Width * 2 + Height * 2;
         }
     }
     public override void Draw(PictureBox pictureBox)
     {
         Graphics g = pictureBox.CreateGraphics();
-        g.DrawRectangle(new Pen(Color.Blue), X0, Y0, Width, Height);
+        g.DrawRectangle(new Pen(Color.Blue, Thickness), X0, Y0, Width, Height);
 
     }
 

@@ -4,14 +4,34 @@ class ClsForm : Form
 {
     Button btnLength,btnArea,SaveXml,btnLoadXml,btnDraw;
 
-    Shape line = new Line(0, 0, 10, 0, "Linea");
-    Shape rect = new Rectagle(10,20, 40, 100, "rect");
+    Shape poly3 = new Polygon(3);
+    Shape poly4 = new Polygon(4);
+    Shape poly5 = new Polygon(5);
+    Shape poly6 = new Polygon(6);
+    Shape poly7 = new Polygon(7);
+    Shape poly8 = new Polygon(8);
+    Shape poly9 = new Polygon(9);
+    Shape poly10 = new Polygon(10);
+    Shape poly11 = new Polygon(11);
+
+
+
+
     ListShapes listShape = new ListShapes();
     PictureBox pictureBox = new PictureBox();
     public ClsForm()
     {
-        listShape.Add(line);
-        listShape.Add(rect);
+        pictureBox.Height = 1000;
+        pictureBox.Width = 1000;
+        //listShape.Add(line);
+        //listShape.Add(rect);
+        //listShape.Add(poly5);
+        listShape.Add(poly6);
+        //listShape.Add(poly7);
+        listShape.Add(poly8);
+        //listShape.Add(poly9);
+        listShape.Add(poly10);
+        //listShape.Add(poly11);
 
         btnLength = new Button
         {
@@ -72,14 +92,14 @@ class ClsForm : Form
     {
         //rect.X = 0; rect. = 10;
         //rect.Y = 0; rect.Y1 = 10;
-        this.btnArea.Text=rect.Area.ToString();
+        //this.btnArea.Text=rect.Area.ToString();
     }
 
     private void Btn_Click(object sender, EventArgs e)
     {
         // line.X0 = 0; line.X1 = 10;
         // line.Y0 = 0; line.Y1 = 0;
-        this.Text = line.ToString()+"Length="+ line.Length;
+        //this.Text = line.ToString()+"Length="+ line.Length;
     }
 }
 
