@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using System.Drawing;
 
 
 [Serializable]
@@ -13,15 +14,31 @@ using System.Xml.Serialization;
 public abstract class Shape 
 {
     private string name;
+    private Color color;
+    private float thickness;
     public int X0 { get; set; }
     public int Y0 { get; set; }
-    public Shape(string s)
+    public Shape(string s, Color color, float thickness)
     {
         Id = s;
+        this.color = color;
+        this.thickness = thickness;
     }
 
     protected Shape()
     {
+    }
+    public float Thickness
+    {
+        get
+        {
+            return thickness;
+        }
+
+        set
+        {
+            thickness = value;
+        }
     }
 
     public string Id
@@ -34,6 +51,18 @@ public abstract class Shape
         set
         {
             name = value;
+        }
+    }
+    public Color Colour
+    {
+        get
+        {
+            return color;
+        }
+
+        set
+        {
+            color = value;
         }
     }
     public abstract double Area

@@ -4,9 +4,9 @@ using System.Windows.Forms;
 public class Line:Shape
 {
     public Line() {}
-    public Line(string s):base(s) { }
+    public Line(string s, Color color, float thickness) :base(s, color, thickness) { }
 
-    public Line(int x0, int y0, int x1, int y1, string id) : base(id)
+    public Line(int x0, int y0, int x1, int y1, string id, Color color, float thickness) : base(id, color, thickness)
     {
         this.X0 = x0;
         this.Y0 = y0;
@@ -36,8 +36,9 @@ public class Line:Shape
     public override void Draw(PictureBox pictureBox)
     {
         Graphics g = pictureBox.CreateGraphics();
-        g.DrawLine(new Pen(Color.Blue), X0, Y0, X1, Y1);
-
+        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+        g.DrawLine(new Pen(Colour, Thickness), X0, Y0, X1, Y1);
+        g.Dispose();
     }
 
 }

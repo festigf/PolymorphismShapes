@@ -6,9 +6,13 @@ using System.Windows.Forms;
 public class Circle : Shape
 {
     public Circle() { }
-    public Circle(string s) : base(s) { }
+    public Circle(int x0, int y0, int radius, string s, Color color, float thickness) : base(s, color, thickness) {
+        this.X0 = x0;
+        this.Y0 = y0;
+        this.Radius = radius;
+    }
 
-   
+    public int Radius { get; set; }
     public int X1 { get; set; }
     public int Y1 { get; set; }
 
@@ -30,7 +34,10 @@ public class Circle : Shape
     }
     public override void Draw(PictureBox pictureBox)
     {
-
+        Graphics g = pictureBox.CreateGraphics();
+        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+        g.DrawEllipse(new Pen(Colour, Thickness), X0, Y0, Radius * 2, Radius * 2);
+        g.Dispose();
     }
 
 }

@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 class ClsForm : Form
 {
     Button btnLength,btnArea,SaveXml,btnLoadXml,btnDraw;
-
-    Shape line = new Line(0, 0, 10, 0, "Linea");
-    Shape rect = new Rectagle(10,20, 40, 100, "rect");
     ListShapes listShape = new ListShapes();
-    PictureBox pictureBox = new PictureBox();
+    PictureBox pictureBox;
     public ClsForm()
     {
-        listShape.Add(line);
-        listShape.Add(rect);
+        listShape = new ListShapes()
+        {
+            new Line(0, 0, 30, 10, "Line", Color.Red, 2),
+            new Rectagle(10, 20, 40, 100, "Rect", Color.Green, 2),
+            new Circle(40, 40, 20, "Circle", Color.Blue, 8),
+            new Square(80, 10, 40, "Square", Color.Yellow, 2),
+            new Polygon(110, 110, 5, 100, "Square", Color.Black, 2)
+        };
+
 
         btnLength = new Button
         {
@@ -46,11 +51,21 @@ class ClsForm : Form
         };
         this.Controls.Add(btnDraw);
         this.btnDraw.Click += BtnDraw_Click;
+
+        pictureBox = new PictureBox()
+        {
+            Left = -20,
+            Top = -80,
+            Anchor = AnchorStyles.Right & AnchorStyles.Bottom & AnchorStyles.Left & AnchorStyles.Top,
+            Width = 400,
+            Height = 400,
+            BackColor = Color.White
+        };
+
         this.Controls.Add(pictureBox);
-        pictureBox.Left = 50;
-        pictureBox.Anchor = AnchorStyles.Bottom & AnchorStyles.Right;
-        this.Width = 600;
-        this.Height = 800;
+
+        this.Width = 510;
+        this.Height = 540;
     }
 
     private void BtnDraw_Click(object sender, EventArgs e)
@@ -72,14 +87,14 @@ class ClsForm : Form
     {
         //rect.X = 0; rect. = 10;
         //rect.Y = 0; rect.Y1 = 10;
-        this.btnArea.Text=rect.Area.ToString();
+        //this.btnArea.Text=rect.Area.ToString();
     }
 
     private void Btn_Click(object sender, EventArgs e)
     {
         // line.X0 = 0; line.X1 = 10;
         // line.Y0 = 0; line.Y1 = 0;
-        this.Text = line.ToString()+"Length="+ line.Length;
+        //this.Text = line.ToString()+"Length="+ line.Length;
     }
 }
 
