@@ -22,13 +22,13 @@ public class Rectagle : Shape
     {
         get
         {
-            return Width * 2+ Height*2;
+            return Width * 2+ Height*2;//Calcollo dell'area
         }
     }
     public override void Draw(PictureBox pictureBox)
     {
         Graphics g = pictureBox.CreateGraphics();
-        g.DrawRectangle(new Pen(Color.Blue), X0, Y0, Width, Height);
+        g.DrawRectangle(new Pen(Color.Blue), X0, Y0, Width, Height); //cordinate dll'angolo sinistra del rettangolo e larghezza e altezza
 
     }
 

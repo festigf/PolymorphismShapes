@@ -10,6 +10,7 @@ using System.Xml.Serialization;
 [XmlInclude(typeof(Square))]
 [XmlInclude(typeof(Circle))]
 
+//Clase base
 public abstract class Shape 
 {
     private string name;
@@ -39,11 +40,11 @@ public abstract class Shape
     public abstract double Area
     {
         get;
-    }
+    } //Area ritorna nulla
     public abstract double Length
     {
         get;
-    }
+    } //Lunheza ritorna nulla
        
 
     public override string ToString()

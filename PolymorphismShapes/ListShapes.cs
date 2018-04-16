@@ -4,15 +4,15 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Drawing;
 using System.Windows.Forms;
-public class ListShapes : List<Shape>
+public class ListShapes : List<Shape>//lista tipizzata su Shape
 {
-    public bool SaveXml(String fileName)
+    public bool SaveXml(String fileName) //salvare figure in un file xml.
     {
         try
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<Shape>));
             StreamWriter sw = new StreamWriter(fileName);
-            xs.Serialize(sw, this);
+            xs.Serialize(sw, this); //Serialize mette in serie i dati. 
             sw.Close();
         }
         catch (Exception e)
@@ -22,7 +22,7 @@ public class ListShapes : List<Shape>
         }
         return true;
     }
-    public bool LoadXml(string fileName)
+    public bool LoadXml(string fileName) //caricamento figure in un file xml
     {
         if (File.Exists(fileName))
         {
@@ -41,7 +41,7 @@ public class ListShapes : List<Shape>
     {
         foreach (Shape item in this)
         {
-            item.Draw(pictureBox);
+            item.Draw(pictureBox); //Draw della line se è un oggetto line, draw deel rettangolo se è un oggetto rettangolo
         }
     }
 }

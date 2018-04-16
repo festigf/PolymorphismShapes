@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+
+//classe che eredita la classe Shape
 public class Line:Shape
 {
-    public Line() {}
-    public Line(string s):base(s) { }
+    public Line() {} //costruttore di default vuoto
+    public Line(string s):base(s) { } //costruttore
 
-    public Line(int x0, int y0, int x1, int y1, string id) : base(id)
+    public Line(int x0, int y0, int x1, int y1, string id) : base(id) //costrutore completo
     {
         this.X0 = x0;
         this.Y0 = y0;
@@ -26,7 +28,7 @@ public class Line:Shape
     {
         get
         {
-            return Math.Sqrt(Math.Pow(X1 - X0, 2) + Math.Pow(Y1 - Y0, 2));
+            return Math.Sqrt(Math.Pow(X1 - X0, 2) + Math.Pow(Y1 - Y0, 2)); //calcolo della lunghezza
         }
     }
     public override string ToString()
@@ -35,8 +37,8 @@ public class Line:Shape
     }
     public override void Draw(PictureBox pictureBox)
     {
-        Graphics g = pictureBox.CreateGraphics();
-        g.DrawLine(new Pen(Color.Blue), X0, Y0, X1, Y1);
+        Graphics g = pictureBox.CreateGraphics(); //inizializa un oggetto CreateGraphics
+        g.DrawLine(new Pen(Color.Blue), X0, Y0, X1, Y1); //inpostare il colore e xo,yo sono l'origine
 
     }
 
