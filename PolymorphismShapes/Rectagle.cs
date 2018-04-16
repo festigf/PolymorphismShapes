@@ -28,8 +28,8 @@ public class Rectagle : Shape
     public override void Draw(PictureBox pictureBox)
     {
         Graphics g = pictureBox.CreateGraphics();
-        g.DrawRectangle(new Pen(Color.Blue), X0, Y0, Width, Height);
-
+        g.DrawRectangle(new Pen(Color.Blue), X0, Y0, Width, Height);        //x0 e y0 sono le coordinate del punto di partenza
+        //g.DrawRectangle(new Pen(Color.Blue), X0, Y0,100, 40);
     }
 
 }

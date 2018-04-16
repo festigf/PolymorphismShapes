@@ -12,7 +12,7 @@ public class ListShapes : List<Shape>
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<Shape>));
             StreamWriter sw = new StreamWriter(fileName);
-            xs.Serialize(sw, this);
+            xs.Serialize(sw, this);     //scrive nel file gli oggetti della lista uno dietro l'altro
             sw.Close();
         }
         catch (Exception e)

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-public class Line:Shape
+public class Line : Shape
 {
     public Line() {}
-    public Line(string s):base(s) { }
+    public Line(string s):base(s) { }       //nome oggetto
 
     public Line(int x0, int y0, int x1, int y1, string id) : base(id)
     {
@@ -36,7 +36,9 @@ public class Line:Shape
     public override void Draw(PictureBox pictureBox)
     {
         Graphics g = pictureBox.CreateGraphics();
-        g.DrawLine(new Pen(Color.Blue), X0, Y0, X1, Y1);
+        //g.DrawLine(new Pen(Color.Blue), X0, Y0, X1, Y1);      //x0 e y0 sono le coordinate del punto di partenza, x1 e y1 sono le coordinate del punto di arrivo
+        g.DrawLine(new Pen(Color.Red,3), X0, Y0, X1, Y1);
+
 
     }
 

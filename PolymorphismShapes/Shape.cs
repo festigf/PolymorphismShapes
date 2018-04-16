@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-
+using System.Drawing;
 
 [Serializable]
 [XmlInclude(typeof(Shape))]
@@ -14,7 +14,9 @@ public abstract class Shape
 {
     private string name;
     public int X0 { get; set; }
+
     public int Y0 { get; set; }
+
     public Shape(string s)
     {
         Id = s;
@@ -26,15 +28,8 @@ public abstract class Shape
 
     public string Id
     {
-        get
-        {
-            return name;
-        }
-
-        set
-        {
-            name = value;
-        }
+        get{ return name; }
+        set{ name = value; }
     }
     public abstract double Area
     {
